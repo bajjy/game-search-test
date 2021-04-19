@@ -1,0 +1,134 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  background-color: rgb(26, 26, 26);
+  color: white;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex-grow: 1;
+  }
+
+  header.app-header {
+    .container {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+
+    img {
+      width: 50px;
+      animation: spin 1s linear 1;
+
+      &.spin {
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  .container {
+    max-width: 90vw;
+    margin: auto;
+  }
+  .Stores {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    img {
+      width: 40px;
+      margin-right: 0.25em;
+    }
+    input {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px;
+      border: 1px solid gray;
+      border-radius: 1em;
+      padding: 0.5em;
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+      transition: all 0.5s ease-out;
+    }
+
+    input:checked + label {
+      border-color: green;
+      background-color: #7b7b7b;
+      color: black;
+    }
+  }
+  .Games {
+    display: flex;
+    flex-wrap: wrap;
+    .game {
+      width: calc(50% - 1em);
+      padding: 0.5em;
+      @media (min-width: 980px) {
+        width: calc(25% - 1em);
+      }
+      .info {
+        display: flex;
+        .score {
+          font-size: 2em;
+          color: orange;
+        }
+        .price {
+          font-size: 1em;
+          font-weight: 900;
+        }
+      }
+      img {
+        align-self: flex-start;
+        max-width: 100px;
+      }
+    }
+  }
+  .search {
+    input {
+      cursor: pointer;
+      padding: 5px;
+      border: 1px solid gray;
+      border-radius: 1em;
+      padding: 0.5em;
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+      transition: all 0.5s ease-out;
+    }
+    button {
+      cursor: pointer;
+      padding: 5px;
+      border: 1px solid green;
+      border-radius: 1em;
+      padding: 0.5em;
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+      transition: all 0.5s ease-out;
+    }
+  }
+}
